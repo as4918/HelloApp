@@ -8,13 +8,11 @@ public class HelloApp {
 
             StringBuilder names = new StringBuilder();
 
-            for (int i = 0; i < args.length; i++) {
-
-                names.append(args[i]);
-
-                if (i < args.length - 1) {
+            for (String name : args) {
+                if (names.length() > 0) {
                     names.append(", ");
                 }
+                names.append(name);
             }
 
             System.out.println("Hello, " + names + "!");
