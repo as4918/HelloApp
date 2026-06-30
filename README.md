@@ -1,35 +1,37 @@
 # HelloApp
 
-HelloApp is a Java Maven project that gradually builds a simple console application through multiple use cases.
+HelloApp is a simple Java console application developed incrementally through seven use cases. The project demonstrates Java fundamentals, command-line argument handling, loops, string manipulation, and Git workflow using feature branches.
 
 ## Features
 
-- UC1: Display Hello World
-- UC2: Display a user's name
-- UC3: Handle optional command-line arguments
-- UC4: Display multiple names
-- UC5: Read a name from standard input
-- UC6: Read multiple names
-- UC7: Store names in memory
-- UC8: Remove names
-- UC9: Refactor into methods
-- UC10: Separate name management into a class
-- UC11: Persist names across runs
-- UC12: Display greetings in banner format
+- UC1: Display "Hello World"
+- UC2: Display a personalized greeting using a command-line argument
+- UC3: Display a personalized greeting or a default message ("Hello, World!")
+- UC4: Display greetings for multiple command-line arguments
+- UC5: Display greetings for multiple arguments using an enhanced for loop
+- UC6: Display greetings using the `substring()` method to remove the trailing delimiter
+- UC7: Display greetings using the `String.join()` method
+
+## Technologies Used
+
+- Java
+- Git & GitHub
+- VS Code
 
 ## Project Structure
 
 ```
-HelloApp
+HelloApp/
 │
-├── docs
+├── docs/
 │   └── HelloAppUC.md
 │
-├── src
-│   └── main
-│       └── java
+├── src/
+│   └── main/
+│       └── java/
 │           └── HelloApp.java
 │
+├── .gitignore
 └── README.md
 ```
 
@@ -38,11 +40,35 @@ HelloApp
 Compile:
 
 ```bash
-javac HelloApp.java
+javac src/main/java/HelloApp.java
 ```
 
-Run:
+Run without arguments:
 
 ```bash
-java HelloApp
+java -cp src/main/java HelloApp
 ```
+
+Run with arguments:
+
+```bash
+java -cp src/main/java HelloApp Alice Bob Charlie
+```
+
+## Sample Output
+
+Without arguments:
+
+```
+Hello, World!
+```
+
+With arguments:
+
+```
+Hello, Alice, Bob, Charlie!
+```
+
+## Author
+
+Anushka
